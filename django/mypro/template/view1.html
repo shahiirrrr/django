@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi there</h1>
+    {% block content %}
+    <table>
+        {% for i in data %}
+        <tr>
+            <td class="rr">{{i.docid}}</td>
+            <td class="rr">{{i.name}}</td>
+            <td class="rr">{{i.section}}</td>
+            <td> <a class="ee" href="{% url 'edit' i.pk %}">edit</a></td>
+            <td> <a class="ee" href="{% url 'delete' i.pk %}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+   {% endblock %}
+</body>
+</html>
