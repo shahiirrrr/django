@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>            
+  <html lang="en">
+    <head>
+      <title>Anime Cart</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="stylesheet" href="{% static 'css/b.css' %}">
+    </head>
+    <body>
+      <header id="header">
+        <div class="header-content-div">
+          
+          <a href="#home-sec">
+            <img
+              src="{% static 'images/logo.png '%}"
+              alt="Company Logo"
+              id="header-img"
+          /></a>
+          <nav id="nav-bar">
+            <a href="{% url 'basepage' %}" class="nav-link">HOME</a>
+            <a href="{% url 'productpage' %}" class="nav-link">SHOP</a>
+            <a href="#our-service" class="nav-link">OUR SERVICE</a>
+            <a href="{% url 'loginpage'%}" class="nav-link">LOGIN</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section id="home-sec" class="flexible home-sec">
+          <div class="eye-grabber-img">
+       
+            <img src="{% static 'images/luffy.png '%}" />
+          </div>
+          <div class="eye-grabber">
+            <h1>Fasion, Meets, Fantasy.</h1>
+            <h2>
+              Elevate your style with anime-inspired fasion, where every outfits tells a story of passion and creativity.
+            </h2>
+            <button class="btn" onclick="window.location.href = 'product/';">
+              Explore Now
+            </button>
+          </div>
+        </section>
+
+
+        
+
+        <section id="varieties" class="sec-padding">
+          <h3 class="section-heading">VARIETIES</h3>
+          <div class="sec-content-div flexible">
+            <div class="tile">
+              <img src="{% static 'images/onepice.jpg '%}" >
+              <h4>Onepice</h4>
+              <p>
+                "Explore the high seas of style with our One Piece anime-inspired fashion collection. Embrace the adventurous spirit of Monkey D. Luffy and his crew through our unique and trendy clothing selections."
+              </p>
+            </div>
+            <div class="tile">
+              <a href="{% url 'narutopage' %}">
+              <img src="{% static 'images/naruto.jpg '%}"
+               ></a>
+              
+              <h4>Naruto</h4>
+              <p>
+                "Channel the ninja spirit with our Naruto-themed fashion line. Unleash your inner ninja with exclusive apparel inspired by the iconic characters and powerful symbolism of the Naruto universe."
+              </p>
+            </div>
+            <div class="tile">
+              <img src="{% static 'images/demonslayer.jpg '%}" >
+              <h4>Demon Slayer</h4>
+              <p>
+                Step into the world of Demon Slayer with our fashion collection inspired by the iconic anime. Embrace the breath of style and resilience with our unique apparel.
+              </p>
+            </div>
+            <div class="tile">
+              <img src="{% static 'images/bleach.jpg '%}" >
+              <h4>Bleach</h4>
+              <p>
+                "Elevate your style with our Bleach-inspired fashion collection, capturing the essence of soul reapers and the intricate world of spiritual battles. Unleash you fusion with bleach."
+              </p>
+            </div>
+            <div class="tile">
+              <img src="{% static 'images/db.jpg '%}" >
+              <h4>Dragon Ball</h4>
+              <p>
+                "Power up your wardrobe with our Dragon Ball-inspired fashion line, Unleash your inner Super Saiyan with our exclusive and dynamic Dragon Ball-themed apparel."
+            </div>
+            <div class="tile">
+              <img src="{% static 'images/jjk.jpg '%}" >
+              <h4>jujutsu kaisen</h4>
+              <p>
+                "Infuse your wardrobe with the cursed energy of Jujutsu Kaisen through our fashion collection. 
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="our-service" class="sec-padding">
+          <h3 class="section-heading">OUR SERVICE</h3>
+          <div class="sec-content-div">
+            <div class="bars">
+              <div class="icon-container">
+                <img src="
+                " alt="" />
+              </div>
+              <div class="txt-container">
+                <h5>Quality</h5>
+                <p>We deliver good and neat products  with a 100% guarantee.</p>
+              </div>
+            </div>
+            <div class="bars">
+              <div class="icon-container">
+                <img src="https://i.ibb.co/FKNq4Qr/delivered.png" alt="" />
+              </div>
+              <div class="txt-container">
+                <h5>Fast</h5>
+                <p>
+                  We deliver your orders as fast as possible, delivery procedure
+                  begins as soon as possible.
+                </p>
+              </div>
+            </div>
+            <div class="bars">
+              <div class="icon-container">
+                <img src="https://i.ibb.co/HHQK1wV/happy.png" alt="" />
+              </div>
+              <div class="txt-container">
+                <h5>Satisfying</h5>
+                <p>
+                  We guarantee 100% customer satisfaction. We do our best to make
+                  your purchase experience smooth. But if we mess up somehow you
+                  will get compensated for every inconvenience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+       
+        <section class="sec-padding" id="contact">
+          <h3 class="section-heading">CONTACT</h3>
+          <div class="sec-content-div flexible">
+            <h6>To make an order or just to know more contact us :</h6>
+            <form
+              id="form"
+              action="https://www.freecodecamp.com/email-submit"
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email Address"
+                required
+              />
+              <input type="submit" class="btn" id="submit" value="Know More" />
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer>
+      
+      </footer>
+    </body>
+  </html>
+</body>
+</html>
